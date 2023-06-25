@@ -1,0 +1,8 @@
+/* само окошко модальное для всплывающей карточки товара */
+.css-pv22qu {
+  --modal-bg: rgba(202, 163, 201, 1) !important;
+  color: rgba(168, 127, 161, 1) !important;
+  border-radius: 4rem !important;
+  height: 80vh !important;
+  max-width: 60vw !important;
+}
