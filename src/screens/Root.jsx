@@ -147,6 +147,7 @@ export default function Root() {
               {/* сделала */}
               {/* нужно поднять выше, билже к тексту эти кнопки */}
               {/* при наведении красоту навести */}
+              {/*  */}
               <GridItem colSpan={1}>
                 <Button
                   variant='ghost'
