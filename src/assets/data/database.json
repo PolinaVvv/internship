@@ -1,0 +1,44 @@
+[
+  {
+    "itemNumber": 1,
+    "header": "TERRIS UK-150 V",
+    "availability": "в наличии",
+    "price": "2100",
+    "shortDescription": "Форма корпуса - сопрано, материал - АБС пластик, цвет - розовый матовый, чехол в комплекте"
+  },
+  {
+    "itemNumber": 2,
+    "header": "KALA MK-SD/ LBLBURST MAKALA",
+    "availability": "нет в наличии, под заказ!",
+    "price": "2500",
+    "shortDescription": "Укулеле сопрано, цвет Light Blue Burst, гриф - махагони, накладка грифа - орех, количество ладов - 12"
+  },
+  {
+    "itemNumber": 3,
+    "header": "FLIGHT TUS ALYONA SHVETZ",
+    "availability": "нет в наличии, под заказ!",
+    "price": "4090",
+    "shortDescription": "Укулеле Travel, сопрано, подписная укулеле Алены Швец, пластик"
+  },
+  {
+    "itemNumber": 4,
+    "header": "FLIGHT TUS 35 DB",
+    "availability": "в наличии",
+    "price": "3250",
+    "shortDescription": "Укулеле Travel, сопрано, синяя, пластик. Чехол в комплекте"
+  },
+  {
+    "itemNumber": 5,
+    "header": "Populele 2 Black",
+    "availability": "в наличии",
+    "price": "15900",
+    "shortDescription": "Умное укулеле, материал - композитный карбон, цвет - чёрный"
+  },
+  {
+    "itemNumber": 6,
+    "header": "Populele 2 Black",
+    "availability": "в наличии",
+    "price": "15900",
+    "shortDescription": "Умное укулеле, материал - композитный карбон, цвет - чёрный"
+  }
+]
