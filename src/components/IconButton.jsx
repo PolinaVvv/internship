@@ -11,10 +11,10 @@ export default function IconButton({
   return (
     <Button
       variant='ghost'
-      // onClick={onClose}
       fontSize='2xl'
       letterSpacing='0.05em'
       color={color}
+      borderRadius='none'
       alignItems='end'
       justifyContent='start'
       h='min'

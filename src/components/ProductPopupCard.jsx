@@ -140,11 +140,11 @@ export default function ProductPopupCard({ header, price, content }) {
               {/* пыталась - не получается с помощью  transition. видимо, слишком незаметно */}
               {/* не меняется из-за градиента почему-то */}
               <GridItem top='35vh' pl='37vw' colSpan={1} position='absolute'>
-                {/* <Flex direction='column'> */}
-                {dataForIconButton.map((e) => (
-                  <IconButton key={e} content={e.content} ico={e.ico} />
-                ))}
-                {/* </Flex> */}
+                <Flex direction='column' alignSelf='end'>
+                  {dataForIconButton.map((e) => (
+                    <IconButton key={e} content={e.content} ico={e.ico} />
+                  ))}
+                </Flex>
               </GridItem>
             </Grid>
           </ModalBody>
