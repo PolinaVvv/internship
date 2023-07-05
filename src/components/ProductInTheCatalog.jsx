@@ -45,11 +45,14 @@ export default function ProductInTheCatalog({
         <Flex direction='column' w='50%' alignSelf='start'>
           <Text
             color='rgba(202, 163, 201, 1)'
-            fontSize='4xl'
+            fontSize='5vh'
             letterSpacing='0.05em'
-            wordBreak='break-word'
+            // wordBreak='break-word'
+            whiteSpace='normal'
             pt='10%'
             align='start'
+            w='100%'
+            maxH='70px'
           >
             {header}
           </Text>

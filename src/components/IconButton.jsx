@@ -6,7 +6,7 @@ export default function IconButton({
   content,
   ico,
   color = 'rgba(168, 127, 161, 1)',
-  backgroundColor = 'radial-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0))',
+  backgroundColor = 'rgba(255, 255, 255, 0.1)',
 }) {
   return (
     <Button

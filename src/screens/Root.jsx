@@ -23,6 +23,7 @@ import ButtonInAFrame from '../components/ButtonInOrWithoutFrame.jsx'
 import ProductPopupCard from '../components/ProductPopupCard.jsx'
 import ProductInTheCatalog from '../components/ProductInTheCatalog.jsx'
 import CustomSelect from '../components/CustomSelect.jsx'
+import FixedMenu from '../components/FixedMenu.jsx'
 
 // Styles
 import '../components/Styles.css'
@@ -43,6 +44,7 @@ export default function Root() {
   const test1 = [{ content: 'Применить' }, { content: 'Сбросить' }]
   return (
     <ChakraProvider theme={theme}>
+      <FixedMenu id='menu' />
       {/* не знаю как картинки передать, может есть какой-то формат обмена данными, где можно и текст и картинки использовать?*/}
       {database.map((e) => (
         <ProductPopupCard
@@ -89,9 +91,7 @@ export default function Root() {
         <CustomSelect />
         <CustomSelect />
       </Flex>
-
       <Spacer p='20px' />
-
       <Flex justifyContent='center' flexWrap='wrap'>
         {database.map((e) => (
           <ProductInTheCatalog
