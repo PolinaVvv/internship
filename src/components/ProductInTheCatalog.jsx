@@ -21,6 +21,11 @@ export default function ProductInTheCatalog({
     { content: 'в избранное', ico: HeartStraightLight },
     { content: 'характеристики', ico: ArrowRightLight },
   ]
+
+  const onClick = () => {
+    console.log('hi')
+  }
+
   if (itemNumber % 2 == 1) {
     return (
       <Button
@@ -33,6 +38,7 @@ export default function ProductInTheCatalog({
         borderLeft='none'
         borderBottom='none'
         transition='0.8s'
+        onClick={onClick}
         _hover={{
           background:
             // 'radial-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0))',

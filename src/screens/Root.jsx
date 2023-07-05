@@ -37,7 +37,7 @@ import testUKU from '../assets/imgs/testUKU.svg'
 import testUKU2 from '../assets/imgs/testUKU2.svg'
 
 // Data
-import database from '../assets/data/database.json'
+import { database } from '../assets/data/database.js'
 import ukuleleTypes from '../assets/data/ukuleleTypes.json'
 
 export default function Root() {
@@ -52,6 +52,7 @@ export default function Root() {
           header={e.header}
           price={e.price}
           content={e.shortDescription}
+          img={e.img}
         />
       ))}
       <Spacer />

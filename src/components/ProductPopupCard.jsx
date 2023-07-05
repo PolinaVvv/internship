@@ -32,7 +32,7 @@ import ShoppingCartThin from '../assets/imgs/ShoppingCartThin.svg'
 // как привязать вот эту область выделения и мини-карточку товара на странице каталога - пока хз
 // может просто делать кнопки и по событию клика открывать вот это окно, но я не умею так
 // и нужно убрать кнопку здесь, ибо это модальное окно и в другом месте нужно
-export default function ProductPopupCard({ header, price, content }) {
+export default function ProductPopupCard({ header, price, content, img }) {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const dataForIconButton = [
@@ -101,7 +101,7 @@ export default function ProductPopupCard({ header, price, content }) {
                   <Image
                     maxW='100%'
                     maxH='50vh'
-                    src={testUKU}
+                    src={img}
                     borderRadius='full'
                   />
                 </Flex>
