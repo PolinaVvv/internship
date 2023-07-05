@@ -46,21 +46,23 @@ export default function Root() {
     <ChakraProvider theme={theme}>
       <FixedMenu id='menu' />
       {/* не знаю как картинки передать, может есть какой-то формат обмена данными, где можно и текст и картинки использовать?*/}
-      {database.map((e) => (
+      {/* {database.map((e) => (
         <ProductPopupCard
           key={e}
           header={e.header}
           price={e.price}
           content={e.shortDescription}
         />
-      ))}
+      ))} */}
       <Spacer />
       {/* можно сделать через Tabs, только нужно понять как  */}
       <Flex justifyContent='space-evenly'>
         {ukuleleTypes.map(
-          (e) => (
-            console.log(e),
-            (<ButtonInAFrame key={e} content={e.content} fontSize={'5xl'} />)
+          // объект в функции map можно называть как угодно, например ukulele
+          // так становится понетянее, с какими данными работаешь 
+          (ukulele) => (
+            console.log(ukulele),
+            (<ButtonInAFrame key={ukulele.content} content={ukulele.content} fontSize={'5xl'} />)
           )
         )}
       </Flex>
@@ -71,7 +73,9 @@ export default function Root() {
             console.log(e),
             (
               <ButtonInAFrame
-                key={e}
+              // передаваить как ключ следует уникальное значение строки или уникальный номер, но !!! не позицию в массиве
+          // тогда реакт все компененты сможет отрисовать 
+                key={e.content + 'test1'}
                 content={e.content}
                 fontSize={'3xl'}
                 border={'none'}
@@ -92,14 +96,17 @@ export default function Root() {
         <CustomSelect />
       </Flex>
       <Spacer p='20px' />
-      <Flex justifyContent='center' flexWrap='wrap'>
+      <Flex justifyContent='center' flexWrap='wrap' >
         {database.map((e) => (
           <ProductInTheCatalog
-            key={e}
+          // передаваить как ключ следует уникальное значение строки или уникальный номер, но !!! не позицию в массиве
+          // тогда реакт все компененты сможет отрисовать 
+            key={e.itemNumber+'card'}
             header={e.header}
             price={e.price}
             availability={e.availability}
             itemNumber={e.itemNumber}
+            content={e.shortDescription}
           />
         ))}
       </Flex>

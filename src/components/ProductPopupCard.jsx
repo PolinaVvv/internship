@@ -1,5 +1,4 @@
 import {
-  Button,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -7,7 +6,6 @@ import {
   ModalCloseButton,
   ModalBody,
   Flex,
-  useDisclosure,
   Image,
   Grid,
   GridItem,
@@ -32,8 +30,10 @@ import ShoppingCartThin from '../assets/imgs/ShoppingCartThin.svg'
 // как привязать вот эту область выделения и мини-карточку товара на странице каталога - пока хз
 // может просто делать кнопки и по событию клика открывать вот это окно, но я не умею так
 // и нужно убрать кнопку здесь, ибо это модальное окно и в другом месте нужно
-export default function ProductPopupCard({ header, price, content }) {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+
+// в модальное окно можно передавать переменную (открыто оно или нет) и функцию, которая будет закрывать окно
+// а в месте где будет вызываться модальное окно создать функции и переменную состояния
+export default function ProductPopupCard({ header, price, content, isOpen, onClose }) {
 
   const dataForIconButton = [
     { content: 'подробнее', ico: ArrowRightLight },
@@ -42,7 +42,6 @@ export default function ProductPopupCard({ header, price, content }) {
   ]
   return (
     <>
-      <Button onClick={onOpen}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay bg='none' backdropFilter='blur(10px) ' />
         <ModalContent>
