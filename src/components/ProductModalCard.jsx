@@ -1,5 +1,4 @@
 import {
-  Button,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -7,20 +6,15 @@ import {
   ModalCloseButton,
   ModalBody,
   Flex,
-  useDisclosure,
   Image,
   Grid,
   GridItem,
 } from '@chakra-ui/react'
 
 // Components
-import IconButton from '../components/IconButton.jsx'
+import CustomIconButton from './CustomIconButton.jsx'
 
-// Imgs
-import testUKU from '../assets/imgs/testUKU.svg'
-import testUKU2 from '../assets/imgs/testUKU2.svg'
-import alyona from '../assets/imgs/alyona.jpg'
-
+// Img
 import EllipseForPopup from '../assets/imgs/EllipseForPopup.svg'
 import Rectangle1 from '../assets/imgs/Rectangle1.svg'
 import Polygon1 from '../assets/imgs/Polygon1.svg'
@@ -29,12 +23,16 @@ import ArrowRightLight from '../assets/imgs/ArrowRightLight.svg'
 import HeartStraightLight from '../assets/imgs/HeartStraightLight.svg'
 import ShoppingCartThin from '../assets/imgs/ShoppingCartThin.svg'
 
-// как привязать вот эту область выделения и мини-карточку товара на странице каталога - пока хз
-// может просто делать кнопки и по событию клика открывать вот это окно, но я не умею так
-// и нужно убрать кнопку здесь, ибо это модальное окно и в другом месте нужно
-export default function ProductPopupCard({ header, price, content, img }) {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-
+// в модальное окно можно передавать переменную (открыто оно или нет) и функцию, которая будет закрывать окно
+// а в месте где будет вызываться модальное окно создать функции и переменную состояния (к вопросу про "как открывать эту модалку")
+export default function ProductModalCard({
+  header,
+  price,
+  content,
+  img,
+  isOpen,
+  onClose,
+}) {
   const dataForIconButton = [
     { content: 'подробнее', ico: ArrowRightLight },
     { content: 'в избранное', ico: HeartStraightLight },
@@ -42,7 +40,6 @@ export default function ProductPopupCard({ header, price, content, img }) {
   ]
   return (
     <>
-      <Button onClick={onOpen}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay bg='none' backdropFilter='blur(10px) ' />
         <ModalContent>
@@ -80,7 +77,6 @@ export default function ProductPopupCard({ header, price, content, img }) {
             textShadow='1px 0, -1px 0, 0 1px, 0 -1px'
             textAlign='center'
             paddingTop='9vh'
-            // pb='0'
             letterSpacing='0.2em'
             maxH='19vh'
           >
@@ -94,8 +90,6 @@ export default function ProductPopupCard({ header, price, content, img }) {
               gap={6}
               position='relative'
             >
-              {/* придумать что делать с фоткой,ибо есть вертикальные и горизонтальные */}
-              {/* вроде сделала */}
               <GridItem rowSpan={3} colSpan={2} h='55vh'>
                 <Flex minH='80%' justify='center' align='center'>
                   <Image
@@ -132,17 +126,10 @@ export default function ProductPopupCard({ header, price, content, img }) {
               >
                 {price}p.
               </GridItem>
-
-              {/* нужно поднять выше, билже к тексту эти кнопки */}
-              {/* сделала, но при масштабировании всё не очень хорошо, в целом везде))) */}
-
-              {/* при наведении красоту навести и текст с иконкой как-то по-человечески выровнть */}
-              {/* пыталась - не получается с помощью  transition. видимо, слишком незаметно */}
-              {/* не меняется из-за градиента почему-то */}
               <GridItem top='35vh' pl='37vw' colSpan={1} position='absolute'>
                 <Flex direction='column' alignSelf='end'>
                   {dataForIconButton.map((e) => (
-                    <IconButton key={e} content={e.content} ico={e.ico} />
+                    <CustomIconButton key={e} content={e.content} ico={e.ico} />
                   ))}
                 </Flex>
               </GridItem>

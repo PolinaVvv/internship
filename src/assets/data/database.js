@@ -1,4 +1,6 @@
-import testUKU from '../imgs/testUKU.svg'
+import img1 from '../imgs/img1.svg'
+import img2 from '../imgs/img2.svg'
+import img3 from '../imgs/img3.jpg'
 
 export const database = [
   {
@@ -16,7 +18,7 @@ export const database = [
     brand: '-',
     finishing: '-',
     color: '-',
-    img: testUKU,
+    img: img1,
   },
   {
     itemNumber: 2,
@@ -33,6 +35,7 @@ export const database = [
     brand: '-',
     finishing: '-',
     color: '-',
+    img: img2,
   },
   {
     itemNumber: 3,
@@ -49,6 +52,7 @@ export const database = [
     brand: '-',
     finishing: '-',
     color: '-',
+    img: img3,
   },
   {
     itemNumber: 4,
@@ -65,6 +69,7 @@ export const database = [
     brand: '-',
     finishing: '-',
     color: '-',
+    img: img3,
   },
   {
     itemNumber: 5,
@@ -81,6 +86,7 @@ export const database = [
     brand: '-',
     finishing: '-',
     color: '-',
+    img: img3,
   },
   {
     itemNumber: 6,
@@ -97,5 +103,6 @@ export const database = [
     brand: '-',
     finishing: '-',
     color: '-',
+    img: img3,
   },
 ]

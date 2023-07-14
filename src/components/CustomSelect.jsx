@@ -3,7 +3,7 @@ import { Select } from '@chakra-ui/react'
 export default function CustomSelect({}) {
   return (
     <Select
-      wMin='1em'
+      wmin='1em'
       w='15em'
       //   h='max'
       color='rgba(168, 127, 161, 1)'
