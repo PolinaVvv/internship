@@ -16,8 +16,16 @@ import '@fontsource/poiret-one/400.css'
 import theme from '../assets/fonts/theme'
 
 // Data
-import { database } from '../assets/data/database.js'
-import ukuleleTypes from '../assets/data/ukuleleTypes.json'
+import {
+  database,
+  housingMaterial,
+  type,
+  neckMaterial,
+  brand,
+  finishing,
+  color,
+  toSortBy,
+} from '../assets/data/database.js'
 
 export default function Root() {
   const test1 = [{ content: 'Применить' }, { content: 'Сбросить' }]
@@ -27,15 +35,11 @@ export default function Root() {
       <Spacer />
       {/* можно сделать через Tabs, только нужно понять как  */}
       <Flex justifyContent='space-evenly'>
-        {ukuleleTypes.map(
+        {type.map(
           // объект в функции map можно называть как угодно, например ukulele
           // так становится понетянее, с какими данными работаешь
           (ukulele) => (
-            <ButtonInAFrame
-              key={ukulele.content}
-              content={ukulele.content}
-              fontSize={'5xl'}
-            />
+            <ButtonInAFrame key={ukulele} content={ukulele} fontSize={'5xl'} />
           )
         )}
       </Flex>
@@ -57,11 +61,21 @@ export default function Root() {
       </Flex>
       <Spacer p='20px' />
       <Flex justifyContent='space-between' px='7vw'>
-        <CustomSelect />
-        <CustomSelect />
-        <CustomSelect />
-        <CustomSelect />
-        <CustomSelect />
+        <CustomSelect
+          options={toSortBy}
+          isMulti={false}
+          defaultValue={toSortBy[0]}
+        />
+        <CustomSelect
+          options={housingMaterial}
+          placeholder={'Материал корпуса'}
+        />
+        <CustomSelect options={neckMaterial} placeholder={'Материал грифа'} />
+      </Flex>
+      <Flex justifyContent='space-evenly' px='7vw'>
+        <CustomSelect options={brand} placeholder={'Бренд'} />
+        <CustomSelect options={finishing} placeholder={'Отделка'} />
+        <CustomSelect options={color} placeholder={'Цвет'} />
       </Flex>
       <Spacer p='20px' />
       <Flex justifyContent='center' flexWrap='wrap' px='5%'>
