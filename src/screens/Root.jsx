@@ -72,6 +72,8 @@ export default function Root() {
         />
         <CustomSelect options={neckMaterial} placeholder={'Материал грифа'} />
       </Flex>
+      <Spacer p='20px' />
+
       <Flex justifyContent='space-evenly' px='7vw'>
         <CustomSelect options={brand} placeholder={'Бренд'} />
         <CustomSelect options={finishing} placeholder={'Отделка'} />
