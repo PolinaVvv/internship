@@ -6,7 +6,7 @@ import { ChakraProvider, Flex, Spacer } from '@chakra-ui/react'
 import ButtonInAFrame from '../components/ButtonInOrWithoutFrame.jsx'
 import ProductInTheCatalog from '../components/ProductInTheCatalog.jsx'
 import CustomSelect from '../components/CustomSelect.jsx'
-import FixedMenu from '../components/FixedMenu.jsx'
+import Header from '../components/Header.jsx'
 
 // Styles
 import '../components/Styles.css'
@@ -31,8 +31,9 @@ export default function Root() {
   const test1 = [{ content: 'Применить' }, { content: 'Сбросить' }]
   return (
     <ChakraProvider theme={theme}>
-      <FixedMenu id='menu' />
-      <Spacer />
+      <Header />
+      <Spacer p='7vh' />
+
       {/* можно сделать через Tabs, только нужно понять как  */}
       <Flex justifyContent='space-evenly'>
         {type.map(
