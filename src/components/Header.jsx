@@ -1,7 +1,9 @@
-import { Flex, IconButton, Text } from '@chakra-ui/react'
+import { Flex, IconButton, Text, useDisclosure } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { FiHeart } from 'react-icons/fi'
 import { BsCart2 } from 'react-icons/bs'
+
+import MenuDrawer from './MenuDrawer'
 
 export default function Header({}) {
   const changeBackground = () => {
@@ -20,6 +22,8 @@ export default function Header({}) {
   }
 
   window.addEventListener('scroll', changeBackground)
+
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <Flex
       id='bgHeader'
@@ -31,6 +35,7 @@ export default function Header({}) {
       zIndex='99'
       transition='0.5s'
     >
+      <MenuDrawer isDrawerOpen={isOpen} onDrawerClose={onClose} />
       <Flex pl='1vw' flex='1'>
         <IconButton
           variant='ghost'
@@ -41,6 +46,7 @@ export default function Header({}) {
           _hover={{
             bg: 'rgba(255, 255, 255, 0.2)',
           }}
+          onClick={onOpen}
         />
         <IconButton
           variant='ghost'
