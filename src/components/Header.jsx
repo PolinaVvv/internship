@@ -32,7 +32,7 @@ export default function Header({}) {
       justifyContent='space-between'
       position='fixed'
       w='100%'
-      zIndex='99'
+      zIndex='999'
       transition='0.5s'
     >
       <MenuDrawer isDrawerOpen={isOpen} onDrawerClose={onClose} />

@@ -5,7 +5,7 @@ import { Button } from '@chakra-ui/react'
 // как сделать так, чтобы она постоянно была активна? чтобы было видно какая категория сейчас показывается
 
 // можно передавать кнопке пропс isActive и на его основе применять разные стили к кнопке
-export default function ButtonInAFrame({
+export default function ButtonInOrWithoutFrame({
   content,
   fontSize,
   border = '2px',
