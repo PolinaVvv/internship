@@ -11,11 +11,13 @@ export default function Header({}) {
     if (window.scrollY >= 80) {
       document.getElementById('bgHeader').style.backgroundColor =
         'rgba(202, 163, 201, 0.9)'
+      // document.getElementById('bgHeader').style.zIndex = '1000'
       document.getElementById('text1Header').style.display = 'inline'
       document.getElementById('text2Header').style.display = 'inline'
     } else {
       document.getElementById('bgHeader').style.backgroundColor =
-        'rgba(80, 81, 171, 1)'
+        'rgba(80, 81, 171, 0)'
+      // document.getElementById('bgHeader').style.zIndex = '999'
       document.getElementById('text1Header').style.display = 'none'
       document.getElementById('text2Header').style.display = 'none'
     }
@@ -32,7 +34,7 @@ export default function Header({}) {
       justifyContent='space-between'
       position='fixed'
       w='100%'
-      zIndex='999'
+      zIndex='1000'
       transition='0.5s'
     >
       <MenuDrawer isDrawerOpen={isOpen} onDrawerClose={onClose} />

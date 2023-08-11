@@ -1,4 +1,4 @@
-import { ChakraProvider, Flex, Text, Image } from '@chakra-ui/react'
+import { ChakraProvider, Flex, Text, Image, Box } from '@chakra-ui/react'
 
 // Screens
 
@@ -37,53 +37,78 @@ import {
 } from '../assets/data/database.js'
 
 export default function Root() {
-  // const test1 = [{ content: 'Применить' }, { content: 'Сбросить' }]
+  const test1 = [{ content: 'Применить' }, { content: 'Сбросить' }]
   return (
     <ChakraProvider theme={theme}>
       <Image
         src={ellipse1}
         position='absolute'
-        // zIndex='-999'
-        boxSize='25%'
-        left='19vw'
-        mt='10vh'
+        // zIndex='-1000'
+        boxSize='180px'
+        w='min'
+        left='24vw'
+        top='10vh'
       />
       <Image
         src={ellipse2}
+        boxSize='xs'
         position='absolute'
-        zIndex='-999'
-        boxSize='50%'
-        left='-10vw'
-        // right='100vw'
-        mt='50vh'
+        zIndex='-1000'
+        w='min'
+        left='5vw'
+        top='50vh'
       />
       <Image
         src={ellipse3}
+        boxSize='170'
         position='absolute'
-        zIndex='-999'
-        boxSize='30%'
-        left='27vw'
-        mt='38vh'
+        zIndex='-1000'
+        w='min'
+        left='37vw'
+        mt='44vh'
       />
       <Image
         src={ellipse5}
         position='absolute'
-        // zIndex='-999'
-        boxSize='40%'
-        left='48vw'
-        // mt='1vh'
+        boxSize='3xs'
+        w='min'
+        left='60vw'
       />
       <Image
         src={ellipsseRect}
         position='absolute'
-        zIndex='-999'
-        boxSize='40%'
-        left='48vw'
-        // mt='1vh'
+        // zIndex='999'
+        boxSize='xl'
+        w='min'
+        left='60vw'
+        top='40vh'
+      />
+      <Image
+        src={zigzag1}
+        position='absolute'
+        // zIndex='999'
+        boxSize='100'
+        w='min'
+        left='10vw'
+        top='25vh'
+      />
+      <Image
+        src={Polygon1}
+        position='absolute'
+        // zIndex='999'
+        boxSize='2xs'
+        w='min'
+        left='27vw'
+        top='80vh'
       />
       <Header />
       <Flex direction='column' align='center' pt='10vh'>
-        <Text color='rgba(168, 127, 161, 1)' fontWeight='700' fontSize='2em'>
+        <Text
+          color='rgba(168, 127, 161, 1)'
+          fontWeight='700'
+          fontSize='2em'
+          mb='5vh'
+        >
           UKU
         </Text>
         <Flex direction='column' mb='20vh'>
@@ -91,10 +116,11 @@ export default function Root() {
             color='rgba(202, 163, 201, 1)'
             fontWeight='700'
             fontSize='10em'
-            // вот с этим хз что делать))) это для обводки, но 1. слииишком много кода; 2. обвотка получается округлая, а по макету она более угловая
-            textShadow=' 2px 0px 0px, 1.75517px 0.958851px 0px, 1.0806px 1.68294px 0px, 0.141474px 1.99499px 0px, -0.832294px 1.81859px 0px, -1.60229px 1.19694px 0px,-1.97998px 0.28224px 0px, -1.87291px -0.701566px 0px, -1.30729px -1.5136px 0px, -0.421592px -1.95506px 0px, 0.567324px -1.91785px 0px,1.41734px -1.41108px 0px, 1.92034px -0.558831px 0px;'
-            letterSpacing='10px'
-            h='25vh'
+            style={{
+              WebkitTextStroke: '10px',
+            }}
+            letterSpacing='20px'
+            maxH='25vh'
           >
             УКУЛЕЛЕ
           </Text>
@@ -109,7 +135,6 @@ export default function Root() {
           w='13%'
         ></ButtonInOrWithoutFrame>
       </Flex>
-
       {/* кнопки */}
       {/* <Flex justifyContent='space-evenly'>
         {type.map(
@@ -124,7 +149,6 @@ export default function Root() {
           )
         )}
       </Flex>
-      <Spacer p='20px' />
       <Flex justifyContent='space-evenly'>
         {test1.map((e) => (
           <ButtonInOrWithoutFrame
