@@ -1,4 +1,12 @@
-import { ChakraProvider, Flex, Text, Image, Box } from '@chakra-ui/react'
+import {
+  ChakraProvider,
+  Flex,
+  Text,
+  Image,
+  Box,
+  Grid,
+  Button,
+} from '@chakra-ui/react'
 
 // Screens
 
@@ -7,6 +15,7 @@ import ButtonInOrWithoutFrame from '../components/ButtonInOrWithoutFrame.jsx'
 import ProductInTheCatalog from '../components/ProductInTheCatalog.jsx'
 import CustomSelect from '../components/CustomSelect.jsx'
 import Header from '../components/Header.jsx'
+import ButtonSale from '../components/ButtonSale.jsx'
 
 // Styles
 import '../components/Styles.css'
@@ -23,6 +32,10 @@ import ellipse5 from '../assets/imgs/root/ellipse5.svg'
 import ellipsseRect from '../assets/imgs/root/ellipseRect.svg'
 import Polygon1 from '../assets/imgs/root/Polygon1.svg'
 import zigzag1 from '../assets/imgs/root/zigzag1.svg'
+import sale1 from '../assets/imgs/root/sale1.svg'
+import sale2 from '../assets/imgs/root/sale2.svg'
+import sale3 from '../assets/imgs/root/sale3.svg'
+import bg from '../assets/imgs/root/bg.svg'
 
 // Data
 import {
@@ -135,6 +148,52 @@ export default function Root() {
           w='13%'
         ></ButtonInOrWithoutFrame>
       </Flex>
+      <Flex pt='35vh'>
+        <Text
+          color='rgba(202, 163, 201, 1)'
+          fontWeight='700'
+          fontSize='10em'
+          style={{
+            WebkitTextStroke: '10px',
+          }}
+          letterSpacing='20px'
+          maxH='25vh'
+          pl='10vw'
+        >
+          SALE
+        </Text>
+        <ButtonSale
+          name='SOPRANO TERRIS UK-150 V'
+          price={'2100'}
+          oldPrice={'3100'}
+          img={sale2}
+          transform='scale(1.2) translate(-180px,30%)'
+          left='10vw'
+        />
+      </Flex>
+      <Flex>
+        <ButtonSale
+          name='SOPRANO
+          JORDANI 21-11 GREEN'
+          price={'2500'}
+          oldPrice={'3500'}
+          img={sale1}
+          transform='scale(1.2) translate(230px,0%)'
+          left='10vw'
+          top='-25vh'
+        />
+        <ButtonSale
+          name='SOPRANO
+          KALA MK-SD/
+          LBLBURST MAKALA'
+          price={'2100'}
+          oldPrice={'3100'}
+          img={sale3}
+          transform='scale(1.2) translate(-300px,-50%)'
+          left='8vw'
+          flip={true}
+        />
+      </Flex>
       {/* кнопки */}
       {/* <Flex justifyContent='space-evenly'>
         {type.map(
@@ -185,7 +244,7 @@ export default function Root() {
       </Flex> */}
 
       {/* карточки товара в каталоге */}
-      {/* <Flex justifyContent='center' flexWrap='wrap' px='5%'>
+      <Flex justifyContent='center' flexWrap='wrap' px='5%'>
         {database.map((e) => (
           <ProductInTheCatalog
             // передаваить как ключ следует уникальное значение строки или уникальный номер, но !!! не позицию в массиве
@@ -199,7 +258,7 @@ export default function Root() {
             img={e.img}
           />
         ))}
-      </Flex> */}
+      </Flex>
     </ChakraProvider>
   )
 }
