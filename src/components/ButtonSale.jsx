@@ -6,15 +6,15 @@ export default function ButtonSale({
   oldPrice,
   img,
   transform,
-  left = 'none',
-  top = 'none',
+  left,
+  top,
   flip = false,
 }) {
   if (flip) {
     return (
       <Button
         variant='ghost'
-        borderRadius='full'
+        borderRadius='3xl'
         position='relative'
         left={left}
         top={top}
@@ -74,7 +74,7 @@ export default function ButtonSale({
   return (
     <Button
       variant='ghost'
-      borderRadius='full'
+      borderRadius='3xl'
       position='relative'
       left={left}
       top={top}
