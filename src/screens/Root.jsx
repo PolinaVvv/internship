@@ -20,6 +20,9 @@ import ButtonCatalog from '../components/ButtonCatalog.jsx'
 // Fonts
 import '@fontsource/poiret-one/400.css'
 
+// Styles
+import '../assets/styles/Styles.css'
+
 // Img
 import ellipse1 from '../assets/imgs/root/ellipse1.svg'
 import ellipse2 from '../assets/imgs/root/ellipse2.svg'
