@@ -1,29 +1,24 @@
 import {
-  ChakraProvider,
   Flex,
   Text,
   Image,
-  Box,
-  Grid,
-  Button,
+  // Box,
+  // Grid,
+  // Button,
 } from '@chakra-ui/react'
 
 // Screens
 
 // Components
 import ButtonInOrWithoutFrame from '../components/ButtonInOrWithoutFrame.jsx'
-import ProductInTheCatalog from '../components/ProductInTheCatalog.jsx'
-import CustomSelect from '../components/CustomSelect.jsx'
+// import ProductInTheCatalog from '../components/ProductInTheCatalog.jsx'
+// import CustomSelect from '../components/CustomSelect.jsx'
 import Header from '../components/Header.jsx'
 import ButtonSale from '../components/ButtonSale.jsx'
 import ButtonCatalog from '../components/ButtonCatalog.jsx'
 
-// Styles
-import '../components/Styles.css'
-
 // Fonts
 import '@fontsource/poiret-one/400.css'
-import theme from '../assets/fonts/theme'
 
 // Img
 import ellipse1 from '../assets/imgs/root/ellipse1.svg'
@@ -48,20 +43,20 @@ import catalogB from '../assets/imgs/root/catalogB.svg'
 import doubleEllipse from '../assets/imgs/root/doubleEllipse.svg'
 
 // Data
-import {
-  database,
-  housingMaterial,
-  type,
-  neckMaterial,
-  brand,
-  finishing,
-  color,
-  toSortBy,
-} from '../assets/data/database.js'
+// import {
+//   database,
+//   housingMaterial,
+//   type,
+//   neckMaterial,
+//   brand,
+//   finishing,
+//   color,
+//   toSortBy,
+// } from '../assets/data/database.js'
 import Footer from '../components/Footer.jsx'
 
 export default function Root() {
-  const test1 = [{ content: 'Применить' }, { content: 'Сбросить' }]
+  // const test1 = [{ content: 'Применить' }, { content: 'Сбросить' }]
   const contentForCatalog = [
     {
       content: 'СОПРАНО',
@@ -105,7 +100,8 @@ export default function Root() {
     },
   ]
   return (
-    <ChakraProvider theme={theme}>
+    <>
+      {/* "hero bg section" */}
       <Image
         src={ellipse1}
         position='absolute'
@@ -167,7 +163,10 @@ export default function Root() {
         left='27vw'
         top='80vh'
       />
+      {/* end "hero bg section" */}
       <Header />
+
+      {/* "home hero section" */}
       <Flex direction='column' align='center' pt='10vh'>
         <Text
           color='rgba(168, 127, 161, 1)'
@@ -201,7 +200,9 @@ export default function Root() {
           w='13%'
         ></ButtonInOrWithoutFrame>
       </Flex>
+      {/* end "home hero section" */}
       <Flex pt='35vh'>
+            {/* "sale bg section" */}
         <Image
           src={zigzag1}
           transform='rotate(100deg)'
@@ -255,6 +256,8 @@ export default function Root() {
           left='50vw'
           top='125vh'
         />
+         {/* end "sale bg section" */}
+         {/* "sale content section" */}
         <Text
           color='rgba(202, 163, 201, 1)'
           fontWeight='700'
@@ -275,7 +278,9 @@ export default function Root() {
           transform='scale(1.2) translate(-180px,30%)'
           left='10vw'
         />
+        
       </Flex>
+
       <Flex>
         <ButtonSale
           name='SOPRANO
@@ -299,7 +304,11 @@ export default function Root() {
           flip={true}
         />
       </Flex>
+        {/* end "sale content section" */}
+
+       
       <Flex direction='column'>
+        {/* "catalog bg section" */} 
         <Image
           src={zigzag1}
           position='absolute'
@@ -328,6 +337,8 @@ export default function Root() {
           left='17vw'
           top='230vh'
         />
+        {/* end "catalog bg section" */} 
+        {/* "catalog content section" */} 
         <Text
           color='rgba(202, 163, 201, 1)'
           fontWeight='700'
@@ -356,6 +367,7 @@ export default function Root() {
             />
           ))}
         </Flex>
+        {/* "catalog content section" */} 
       </Flex>
       <Footer />
       {/* кнопки */}
@@ -423,6 +435,6 @@ export default function Root() {
           />
         ))}
       </Flex> */}
-    </ChakraProvider>
+    </>
   )
 }
