@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom/client'
 
 // Screens
 import Root from './screens/Root.jsx'
+import { ChakraProvider } from '@chakra-ui/react'
+import theme from './theme'
 
-// Styles
-import './index.css'
+import './assets/styles/index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Root />
+    <ChakraProvider theme={theme}>
+      <Root />
+    </ChakraProvider>
+    
   </React.StrictMode>
 )
