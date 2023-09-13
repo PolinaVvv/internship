@@ -1,1 +1,1 @@
-export * from 'customFonts'
+export * from './CustomFonts'

@@ -205,7 +205,7 @@ export default function Root() {
       </Flex>
       {/* end "home hero section" */}
       <Flex pt='35vh'>
-            {/* "sale bg section" */}
+        {/* "sale bg section" */}
         <Image
           src={zigzag1}
           transform='rotate(100deg)'
@@ -259,8 +259,8 @@ export default function Root() {
           left='50vw'
           top='125vh'
         />
-         {/* end "sale bg section" */}
-         {/* "sale content section" */}
+        {/* end "sale bg section" */}
+        {/* "sale content section" */}
         <Text
           color='rgba(202, 163, 201, 1)'
           fontWeight='700'
@@ -281,7 +281,6 @@ export default function Root() {
           transform='scale(1.2) translate(-180px,30%)'
           left='10vw'
         />
-        
       </Flex>
 
       <Flex>
@@ -307,11 +306,10 @@ export default function Root() {
           flip={true}
         />
       </Flex>
-        {/* end "sale content section" */}
+      {/* end "sale content section" */}
 
-       
       <Flex direction='column'>
-        {/* "catalog bg section" */} 
+        {/* "catalog bg section" */}
         <Image
           src={zigzag1}
           position='absolute'
@@ -340,8 +338,8 @@ export default function Root() {
           left='17vw'
           top='230vh'
         />
-        {/* end "catalog bg section" */} 
-        {/* "catalog content section" */} 
+        {/* end "catalog bg section" */}
+        {/* "catalog content section" */}
         <Text
           color='rgba(202, 163, 201, 1)'
           fontWeight='700'
@@ -370,7 +368,7 @@ export default function Root() {
             />
           ))}
         </Flex>
-        {/* "catalog content section" */} 
+        {/* "catalog content section" */}
       </Flex>
       <Footer />
       {/* кнопки */}
